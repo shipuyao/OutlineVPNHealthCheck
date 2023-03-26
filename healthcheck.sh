@@ -5,7 +5,8 @@
 . ~/.bashrc
 
 tenantId="144dfc9d-3e1f-4c03-8e42-27eef2458df5"
-spAppId="bdd24406-7234-4bea-b9e3-69a712cd9851"spSecret=${SP_SECRET}
+spAppId="bdd24406-7234-4bea-b9e3-69a712cd9851"
+spSecret=$SP_SECRET
 location="southeastasia"
 resourceGroupName="VPN"
 nicName="vpn1989"
@@ -13,11 +14,11 @@ publicIpName="VPN1-ip"
 ipConfigName="ipconfig1"
 
 storageAccountName="sparknas"
-storageAccountKey=${STORAGE_ACCOUT_KEY}
+storageAccountKey=$STORAGE_ACCOUNT_KEY
 containerName="vpn-access-keys"
 blobName="VPN1-AccessKey.txt"
 
-vpnPassword=${VPN_PWD}
+vpnPassword=$VPN_PWD
 
 date
 
