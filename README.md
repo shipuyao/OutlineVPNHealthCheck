@@ -12,17 +12,21 @@
   
 ## How does it work?
 
-- Install Outline VPN server in a VM
+- Install Outline VPN server in Azure VM
 - Install outline VPN client on your phone or computer
 - Using Dynamical access key in your client 
   - https://www.reddit.com/r/outlinevpn/wiki/index/dynamic_access_keys/#wiki_dynamic_access_keys
   - Using Azure Blob Storage to save real access key
-- Run health script to check Outline server connection, make sure you run it within China network
+- Run health script to check Outline server connection
   - If connection failed, update Outline server VM public IP addresss, update new access key in blob storage
 
+## How to deploy?
 
-You need to pass environment Variables to docker container:
+- Run health check script via cron job in domestic network
+- Or deploy to docker container
 
-SP_SECRET=
-VPN_PWD=
-STORAGE_ACCOUNT_KEY=
+You need to set environment Variables and customize varialbe in healthcheck.sh
+
+- SP_SECRET
+- VPN_PWD
+- STORAGE_ACCOUNT_KEY
