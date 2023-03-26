@@ -1,8 +1,11 @@
 #!/bin/bash
 
+. /etc/profile
+. ~/.bash_profile
+. ~/.bashrc
+
 tenantId="144dfc9d-3e1f-4c03-8e42-27eef2458df5"
-spAppId="bdd24406-7234-4bea-b9e3-69a712cd9851"
-spSecret=${SP_SECRET}
+spAppId="bdd24406-7234-4bea-b9e3-69a712cd9851"spSecret=${SP_SECRET}
 location="southeastasia"
 resourceGroupName="VPN"
 nicName="vpn1989"
