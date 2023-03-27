@@ -25,12 +25,11 @@
 
 - Run health check script via cron job in domestic network
 - Or deploy to docker container
+  - docker build -t shipu/vpnhealthcheck:v1 . 
+  - docker push shipu/vpnhealthcheck:v1
+  - docker run -d -v ${PWD}/preload.sh:/root/preload.sh shipu/vpnhealthcheck:v1
 
-docker build -t shipu/vpnhealthcheck:v1 . 
-docker push shipu/vpnhealthcheck:v1
-docker run -d -v ${PWD}/preload.sh:/root/preload.sh shipu/vpnhealthcheck:v1
-
-You need to set environment Variables and customize varialbe in healthcheck.sh
+You need to set environment Variables and customize varialbe in preload.sh
 
 - SP_SECRET
 - VPN_PWD
