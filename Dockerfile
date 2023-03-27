@@ -12,11 +12,11 @@ ADD healthcheck.sh /root/healthcheck.sh
 # Give execution rights on the cron scripts
 RUN chmod +x /root/healthcheck.sh
 
-RUN echo "* * * * * root /root/healthcheck.sh >> /var/log/cron.log" >> /etc/cron.d/cronjob
+RUN echo "*/5 * * * * root /bin/bash -c 'source /root/preload.sh; /root/healthcheck.sh >> /var/log/cron.log'" >> /etc/cron.d/cronjob
 
 RUN touch /var/log/cron.log
 
 # Running the cron job
 RUN crontab /etc/cron.d/cronjob
 
-ENTRYPOINT ["/bin/bash","-c","service cron start && crontab -l && tail -f /var/log/cron.log"]
+ENTRYPOINT ["/bin/bash","-l","-c","service cron start && crontab -l && tail -f /var/log/cron.log"]
