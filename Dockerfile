@@ -19,4 +19,4 @@ RUN touch /var/log/cron.log
 # Running the cron job
 RUN crontab /etc/cron.d/cronjob
 
-ENTRYPOINT ["/bin/bash","-l","-c","service cron start && crontab -l && tail -f /var/log/cron.log"]
+ENTRYPOINT ["/bin/bash","-c","service cron start && crontab -l && tail -f /var/log/cron.log"]
