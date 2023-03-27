@@ -17,6 +17,7 @@
 - Using Dynamical access key in your client 
   - https://www.reddit.com/r/outlinevpn/wiki/index/dynamic_access_keys/#wiki_dynamic_access_keys
   - Using Azure Blob Storage to save real access key
+  - Example: ssconf://Azure_Blob_SAS_URL
 - Run health script to check Outline server connection
   - If connection failed, update Outline server VM public IP addresss, update new access key in blob storage
 
@@ -24,6 +25,10 @@
 
 - Run health check script via cron job in domestic network
 - Or deploy to docker container
+
+docker build -t shipu/vpnhealthcheck:v1 . 
+docker push shipu/vpnhealthcheck:v1
+docker run -d -v ${PWD}/preload.sh:/root/preload.sh shipu/vpnhealthcheck:v1
 
 You need to set environment Variables and customize varialbe in healthcheck.sh
 
