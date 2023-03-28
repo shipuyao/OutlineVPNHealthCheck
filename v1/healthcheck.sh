@@ -1,7 +1,7 @@
 #!/bin/bash
 
-tenantId="144dfc9d-3e1f-4c03-8e42-27eef2458df5"
-spAppId="bdd24406-7234-4bea-b9e3-69a712cd9851"
+tenantId=""
+spAppId=""
 location="southeastasia"
 resourceGroupName="VPN"
 vmName="VPN1"
