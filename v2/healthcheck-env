@@ -1,9 +1,12 @@
-SP_SECRET=""
-STORAGE_ACCOUNT_KEY=""
-VPN_PWD=""
-
 TENANT_ID=""
 SP_APP_ID=""
+SP_SECRET=""
+
+SA_NAME="sparknas"
+STORAGE_ACCOUNT_KEY=""
+CONTAINER_NAME="vpn-access-keys"
+BLOB_NAME="VPN1-AccessKey.txt"
+
 LOCATION="southeastasia"
 RG_NAME="VPN"
 VM_NAME="VPN1"
@@ -11,6 +14,4 @@ NIC_NAME="vpn1989"
 PIP_NAME="VPN1-ip"
 IPCONFIG_NAME="ipconfig1"
 
-SA_NAME="sparknas"
-CONTAINER_NAME="vpn-access-keys"
-BLOB_NAME="VPN1-AccessKey.txt"
+VPN_PWD=""
