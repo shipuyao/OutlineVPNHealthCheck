@@ -42,7 +42,7 @@ az network public-ip create \
 	--name $PIP_NAME \
 	--sku Standard \
 	--version IPv4 \
-	--LOCATION $LOCATION \
+	--location $LOCATION \
 	--zone 1 2 3
 
 echo "Update ipconfig with new public IP" 
